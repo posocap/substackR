@@ -7,16 +7,16 @@
 get_substack_search(publication_url, query, limit = 10L, offset = 0L)
 }
 \arguments{
-\item{publication_url}{Character, e.g. `"example.substack.com"`.}
+\item{publication_url}{Character, e.g. \code{"example.substack.com"}.}
 
 \item{query}{Character. Search term.}
 
-\item{limit}{Integer `[1–50]`, default `10`.}
+\item{limit}{Integer \verb{[1–50]}, default \code{10}.}
 
-\item{offset}{Integer `>= 0`, default `0`.}
+\item{offset}{Integer \verb{>= 0}, default \code{0}.}
 }
 \value{
-A `data.frame` (possibly zero‐row).
+A \code{data.frame} (possibly zero‐row).
 }
 \description{
 Search posts in a Substack publication. If zero results, returns an

@@ -7,14 +7,14 @@
 get_substack_latest(publication_url, limit = 10L, offset = 0L)
 }
 \arguments{
-\item{publication_url}{Character, e.g. `"example.substack.com"`.}
+\item{publication_url}{Character, e.g. \code{"example.substack.com"}.}
 
-\item{limit}{Integer `[1–50]`, default `10`.}
+\item{limit}{Integer \verb{[1–50]}, default \code{10}.}
 
-\item{offset}{Integer `>= 0`, default `0`.}
+\item{offset}{Integer \verb{>= 0}, default \code{0}.}
 }
 \value{
-A `data.frame` (possibly zero‐row) of post records.
+A \code{data.frame} (possibly zero‐row) of post records.
 }
 \description{
 Fetch the latest posts from a Substack publication.

@@ -40,7 +40,6 @@ build()                            # build tar.gz
 # 10. Run checks
 check()                            # local R CMD check
 check_win_devel()                  # Windows dev check via Microsoft
-check_rhub()                       # CRAN-like checks on R-hub
 
 # 11. Prepare for CRAN release
 #    Bump version in DESCRIPTION first, then:
@@ -48,3 +47,34 @@ release()                          # walks you through CRAN submission
 
 # 12. Create a GitHub release (after CRAN or at a stable version)
 use_github_release(tag = "vX.Y.Z", name = "Version X.Y.Z", draft = FALSE)
+
+########
+# 1. Bump the version in DESCRIPTION (e.g. from 0.1.0 to 0.1.1)
+#    Edit the file manually or use:
+#      sed -i 's/^Version: .*/Version: 0.1.1/' DESCRIPTION
+
+# 2. Run R CMD check as CRAN wants
+R CMD check --as-cran .
+
+# 3. (In R) Build the source tarball
+Rscript -e 'devtools::build()'        # produces substackR_0.1.1.tar.gz
+
+# 4. (Optional) Reverse‐dependency checks via R-hub
+Rscript -e 'rhub::check_for_cran("substackR_0.1.1.tar.gz")'
+
+# 5. Submit via devtools::release() in R (automates upload & email)
+Rscript -e 'devtools::release()'
+
+#    OR, if you prefer manual:
+# 5a. Build tarball if not already done
+R CMD build .
+
+# 5b. Open CRAN submission page and upload
+#      https://cran.r-project.org/submit.html
+
+# 6. After acceptance, tag a GitHub release
+git tag -a v0.1.1 -m "Release v0.1.1"
+git push origin --tags
+
+# 7. (Optional) Rebuild pkgdown site and deploy
+Rscript -e 'pkgdown::build_site()'

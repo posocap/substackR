@@ -12,9 +12,9 @@ get_substack_post(publication_url, slug)
 \item{slug}{Character. Post slug.}
 }
 \value{
-A `data.frame` with one row (or zero rows if missing).
+A \code{data.frame} with one row (or zero rows if missing).
 }
 \description{
-Fetch a single post by its slug. Returns a one‐row `data.frame`, or
+Fetch a single post by its slug. Returns a one‐row \code{data.frame}, or
 zero‐row if not found.
 }

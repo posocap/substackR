@@ -10,7 +10,7 @@ set_substack_key(key)
 \item{key}{A single string: your Substack API key.}
 }
 \value{
-Invisibly `TRUE` if successful.
+Invisibly \code{TRUE} if successful.
 }
 \description{
 Store your key once per session. Subsequent calls to other
