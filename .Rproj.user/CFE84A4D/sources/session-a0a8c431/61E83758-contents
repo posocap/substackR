@@ -1,0 +1,50 @@
+# 1. Install and load helper packages
+install.packages(c("usethis", "devtools", "testthat", "httptest2", "pkgdown"))
+library(usethis)
+library(devtools)
+
+# 2. Initialize DESCRIPTION fields (if not already done)
+use_description(fields = list(
+  Title       = "Access Substack Data via API",
+  Description = "Fetch latest, top, search or single posts from a Substack publication.",
+  `Authors@R` = 'person("Jason", "R.", email = "info@posocap.com", role = c("aut", "cre"))',
+  License     = "MIT + file LICENSE",
+  URL         = "https://github.com/posocap/substackR",
+  BugReports  = "https://github.com/posocap/substackR/issues"
+))
+
+# 3. Set up namespace imports
+use_namespace()
+
+# 4. Add test infrastructure and a starter test
+use_testthat()
+use_test("api-calls")      # creates tests/testthat/test-api-calls.R
+
+# 5. Add a vignette
+use_vignette("intro")
+
+# 6. Set up pkgdown site
+use_pkgdown()
+
+# 7. Add GitHub Actions for R CMD check and pkgdown deploy
+use_github_action_check_standard()  # R CMD check on push/PR
+use_github_action("pkgdown")        # builds & deploys pkgdown site
+
+# 8. Write argument-assertion helper (optional)
+use_r("assert")                    # creates R/assert.R to put helper there
+
+# 9. Document and build
+document()                         # roxygenise NAMESPACE + man/
+build()                            # build tar.gz
+
+# 10. Run checks
+check()                            # local R CMD check
+check_win_devel()                  # Windows dev check via Microsoft
+check_rhub()                       # CRAN-like checks on R-hub
+
+# 11. Prepare for CRAN release
+#    Bump version in DESCRIPTION first, then:
+release()                          # walks you through CRAN submission
+
+# 12. Create a GitHub release (after CRAN or at a stable version)
+use_github_release(tag = "vX.Y.Z", name = "Version X.Y.Z", draft = FALSE)

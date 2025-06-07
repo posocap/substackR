@@ -1,0 +1,116 @@
+```r
+---
+title: "intro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(substackR)
+```
+
+# substackR: Access Substack data from R
+
+The **substackR** package lets you fetch posts from any Substack publication via their public API.  
+You can retrieve the latest posts, top posts, search within posts, or pull a single post by slug.
+
+## Installation
+
+Install from CRAN:
+
+```r
+install.packages("substackR")
+```
+
+Or the development version from GitHub:
+
+```r
+remotes::install_github("youruser/substackR")
+```
+
+## 1. Setup: your API key
+
+First, you’ll need a Substack API key. Once you have one, set it for your session:
+
+```r
+set_substack_key("YOUR_SUBSTACK_API_KEY")
+```
+
+## 2. Fetch the latest posts
+
+Retrieve the most recent posts from a publication (e.g. `"rstudio.substack.com"`):
+
+```r
+latest <- get_substack_latest("rstudio.substack.com", limit = 5)
+str(latest)
+```
+
+## 3. Fetch top posts
+
+Get the currently most popular posts:
+
+```r
+top5 <- get_substack_top("rstudio.substack.com", limit = 5)
+head(top5[, c("title", "likes")])
+```
+
+## 4. Search posts
+
+Search for a term in post titles or content:
+
+```r
+search_results <- get_substack_search(
+  publication_url = "rstudio.substack.com",
+  query           = "tidyverse",
+  limit           = 3
+)
+search_results$title
+```
+
+If there are no matches you’ll get back a zero‐row data.frame:
+
+```r
+empty <- get_substack_search("rstudio.substack.com", query = "⚽️", limit = 2)
+empty
+```
+
+## 5. Get a single post by slug
+
+Fetch one post by its “slug” (the short URL identifier):
+
+```r
+single <- get_substack_post(
+  publication_url = "rstudio.substack.com",
+  slug            = "using-the-new-tidyeval-apis"
+)
+single$title
+```
+
+If the slug doesn’t exist, you’ll again get back an empty data.frame:
+
+```r
+not_found <- get_substack_post("rstudio.substack.com", slug = "no-such-post")
+not_found
+```
+
+---
+
+That’s it! You can now integrate Substack content directly into your R workflows, dashboards, or Shiny apps. For more details, see the function help pages:
+
+```r
+?get_substack_latest
+?get_substack_top
+?get_substack_search
+?get_substack_post
+```
+```
