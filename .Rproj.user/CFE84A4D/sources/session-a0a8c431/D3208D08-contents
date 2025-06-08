@@ -1,11 +1,13 @@
 Package: substackR
 Title: Client Lib for Substack API.
 Version: 0.0.0.9000
+Author: Jason R.
 Authors@R: 
     person("Jason", "R", , "info@posocap.com", role = c("aut", "cre"))
 Description: Client lib for Substack API.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
+Maintainer: Jason R. <info@posocap.com>
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
