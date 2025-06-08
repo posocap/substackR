@@ -2,3 +2,4 @@ prepare_to_publish.R
 inst/doc
 docs
 *.Rproj
+.Rproj.user
