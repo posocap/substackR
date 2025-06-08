@@ -52,23 +52,7 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="at">  </span><span class="fu">github_document</span><span class="kw">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="at">    </span><span class="fu">number_sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="at">    </span><span class="fu">fig_caption</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="at">```{r setup, include=FALSE}</span></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="at">knitr::opts_chunk$set(</span></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="at">  collapse = TRUE,</span></span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="at">  comment = "</span><span class="co">#&gt;",</span></span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="at">  fig.path = "man/figures/README-",</span></span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="at">  out.width = "100%"</span></span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="at">)</span></span></code></pre></div>
-<div class="section level1">
+  <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="substackr">substackR<a class="anchor" aria-label="anchor" href="#substackr"></a>
 </h1></div>
 <p><a href="https://github.com/posocap/substackR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/posocap/substackR/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></p>
@@ -77,10 +61,10 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>From CRAN:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"substackR"</span><span class="op">)</span></span></code></pre></div>
 <p>Development version from GitHub:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")   # if needed</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"posocap/substackR"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -88,7 +72,7 @@
 <h2 id="authentication">Authentication<a class="anchor" aria-label="anchor" href="#authentication"></a>
 </h2>
 <p>Provide your API key once per session with:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/posocap/substackR" class="external-link">substackR</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/set_substack_key.html">set_substack_key</a></span><span class="op">(</span><span class="st">"your-substack-api-key"</span><span class="op">)</span></span></code></pre></div>
 <p>If you haven’t set the key, any API call will prompt you to call <code><a href="reference/set_substack_key.html">set_substack_key()</a></code> first.</p>
@@ -100,7 +84,7 @@
 <h3 id="get_substack_latest">get_substack_latest()<a class="anchor" aria-label="anchor" href="#get_substack_latest"></a>
 </h3>
 <p>Fetches the latest posts.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">latest_posts</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_substack_latest.html">get_substack_latest</a></span><span class="op">(</span></span>
 <span>  publication_url <span class="op">=</span> <span class="st">"posocap.substack.com"</span>,</span>
 <span>  limit           <span class="op">=</span> <span class="fl">10</span>,</span>
@@ -129,14 +113,14 @@
 <h3 id="get_substack_top">get_substack_top()<a class="anchor" aria-label="anchor" href="#get_substack_top"></a>
 </h3>
 <p>Fetches the top (most liked) posts.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">top_posts</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_substack_top.html">get_substack_top</a></span><span class="op">(</span><span class="st">"posocap.substack.com"</span>, limit <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="get_substack_search">get_substack_search()<a class="anchor" aria-label="anchor" href="#get_substack_search"></a>
 </h3>
 <p>Searches posts by keyword.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">search_results</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_substack_search.html">get_substack_search</a></span><span class="op">(</span></span>
 <span>  publication_url <span class="op">=</span> <span class="st">"posocap.substack.com"</span>,</span>
 <span>  query           <span class="op">=</span> <span class="st">"data science"</span>,</span>
@@ -147,7 +131,7 @@
 <h3 id="get_substack_post">get_substack_post()<a class="anchor" aria-label="anchor" href="#get_substack_post"></a>
 </h3>
 <p>Retrieves a single post by slug.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">single_post</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_substack_post.html">get_substack_post</a></span><span class="op">(</span></span>
 <span>  publication_url <span class="op">=</span> <span class="st">"posocap.substack.com"</span>,</span>
 <span>  slug            <span class="op">=</span> <span class="st">"your-post-slug"</span></span>
@@ -171,12 +155,12 @@
 <li><p>Create a branch (e.g. <code>feature/xyz</code>)</p></li>
 <li>
 <p>Install dependencies:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_deps</span><span class="op">(</span>dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </li>
 <li>
 <p>Run tests:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">test</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </li>
 <li><p>Submit a pull request.</p></li>
@@ -189,7 +173,6 @@
 See <code>LICENSE</code> for details.</p>
 </div>
 </div>
-
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
