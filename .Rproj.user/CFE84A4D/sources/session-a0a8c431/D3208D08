@@ -3,7 +3,7 @@
     "path": "~/Documents/poso_press/substackR/DESCRIPTION",
     "project_path": "DESCRIPTION",
     "type": "dcf",
-    "hash": "728656260",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1749335125743.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "29,0",
-        "scrollLine": "10"
+        "cursorPosition": "5,41",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1749341994,
+    "lastKnownWriteTime": 1749342127,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1749341994814,
+    "last_content_update": 1749342127839,
     "read_only": false,
     "read_only_alternatives": []
 }
