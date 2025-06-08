@@ -18,4 +18,4 @@ Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 NeedsCompilation: no
 Packaged: 2025-06-08 01:05:32 UTC; user
 Author: Jason R. [aut, cre]
-Built: R 4.4.3; ; 2025-06-08 01:06:08 UTC; unix
+Built: R 4.4.3; ; 2025-06-08 01:09:48 UTC; unix
