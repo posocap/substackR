@@ -7,8 +7,15 @@ Authors@R:
       given = "Jason",
       family = "R.",
       email = "info@posocap.com",
-      role = c("aut", "cre")
+      role = c("aut")
+    ),
+    person(
+      given = "Jason",
+      family = "R.",
+      email = "info@posocap.com",
+      role = c("cre")
     )
+Maintainer: Jason R. <info@posocap.com>
 Description: Fetch latest, top, search or single posts from a Substack publication.
 License: MIT + file LICENSE
 URL: https://github.com/posocap/substackR
@@ -19,11 +26,11 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-Imports: 
+Imports:
     cli,
     httr2,
     rlang
-Suggests: 
+Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
