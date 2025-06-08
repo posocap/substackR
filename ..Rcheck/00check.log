@@ -8,7 +8,7 @@
 * using session charset: UTF-8
 * using option ‘--as-cran’
 * checking for file ‘./DESCRIPTION’ ... ERROR
-Required fields missing or empty:
-  ‘Author’ ‘Maintainer’
+Required field missing or empty:
+  ‘Maintainer’
 * DONE
 Status: 1 ERROR
