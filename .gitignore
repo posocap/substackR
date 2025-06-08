@@ -1,3 +1,5 @@
+*.tar.gz
+substack.Rcheck/*
 prepare_to_publish.R
 inst/doc
 docs
