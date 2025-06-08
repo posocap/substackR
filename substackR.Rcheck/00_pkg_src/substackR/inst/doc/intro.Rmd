@@ -1,0 +1,90 @@
+---
+title: "intro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(substackR)
+```
+
+If you haven’t set the key, any API call will prompt you to call `set_substack_key()` first.
+
+## Main Functions
+
+### get_substack_latest()
+
+Fetches the latest posts.
+
+```r
+latest_posts <- get_substack_latest(
+  publication_url = "posocap.substack.com",
+  limit           = 10,
+  offset          = 0
+)
+```
+
+Returns a data frame with columns:
+
+- slug
+- url
+- title
+- description
+- excerpt
+- body_html
+- reading_time_minutes
+- audio_url
+- date
+- likes
+- paywall
+- cover_image
+- cover_image_color_palette
+- author
+- author_image
+
+### get_substack_top()
+
+Fetches the top (most liked) posts.
+
+```r
+top_posts <- get_substack_top("posocap.substack.com", limit = 5)
+```
+
+### get_substack_search()
+
+Searches posts by keyword.
+
+```r
+search_results <- get_substack_search(
+  publication_url = "posocap.substack.com",
+  query           = "data science",
+  limit           = 20
+)
+```
+
+### get_substack_post()
+
+Retrieves a single post by slug.
+
+```r
+single_post <- get_substack_post(
+  publication_url = "posocap.substack.com",
+  slug            = "your-post-slug"
+)
+```
+
+## Error Handling
+
+- Missing API key → error asking you to run `set_substack_key()`.
+- HTTP errors (4xx, 5xx, rate limits) → `cli::cli_abort()` with status code and message.
+- JSON parsing issues → warning + empty data frame.
