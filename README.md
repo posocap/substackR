@@ -1,22 +1,3 @@
-```yaml
----
-output:
-  github_document:
-    toc: true
-    toc_depth: 2
-    number_sections: true
-    fig_caption: true
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
-
 # substackR
 
 [![R-CMD-check](https://github.com/posocap/substackR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/posocap/substackR/actions/workflows/R-CMD-check.yaml)
