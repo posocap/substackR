@@ -1,0 +1,5 @@
+get_substack_latest	get_substack_latest
+get_substack_post	get_substack_post
+get_substack_search	get_substack_search
+get_substack_top	get_substack_top
+set_substack_key	set_substack_key

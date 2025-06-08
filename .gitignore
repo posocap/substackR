@@ -3,3 +3,5 @@ inst/doc
 docs
 *.Rproj
 .Rproj.user
+/doc/
+/Meta/

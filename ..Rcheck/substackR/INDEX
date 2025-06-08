@@ -1,0 +1,5 @@
+get_substack_latest     Latest Posts
+get_substack_post       Get Single Post
+get_substack_search     Search Posts
+get_substack_top        Top Posts
+set_substack_key        Set your Substack API Key

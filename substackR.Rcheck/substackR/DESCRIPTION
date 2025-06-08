@@ -1,0 +1,20 @@
+Package: substackR
+Type: Package
+Title: Access Substack Data via API
+Version: 0.0.9
+Author: person("Jason", "R.", email = "info@posocap.com", role = c("aut", "cre"))
+Authors@R: person("Jason", "R.", email = "info@posocap.com", role = c("aut", "cre"))
+Maintainer: Jason R. <info@posocap.com>
+Description: Fetch latest, top, search or single posts from a Substack publication.
+License: MIT + file LICENSE
+URL: https://github.com/posocap/substackR
+BugReports: https://github.com/posocap/substackR/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Config/testthat/edition: 3
+Imports: cli, httr2, rlang
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
+NeedsCompilation: no
+Packaged: 2025-06-08 00:52:00 UTC; user
+Built: R 4.4.3; ; 2025-06-08 01:00:59 UTC; unix

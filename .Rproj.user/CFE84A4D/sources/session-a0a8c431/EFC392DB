@@ -3,7 +3,7 @@
     "path": "~/Documents/poso_press/substackR/vignettes/intro.Rmd",
     "project_path": "vignettes/intro.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "3112455179",
     "contents": "",
     "dirty": false,
     "created": 1749338566457.0,
@@ -16,11 +16,11 @@
         "scrollLine": "72"
     },
     "folds": "",
-    "lastKnownWriteTime": 1749340018,
+    "lastKnownWriteTime": 1749344399,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1749340018865,
+    "last_content_update": 1749344399021,
     "read_only": false,
     "read_only_alternatives": []
 }
