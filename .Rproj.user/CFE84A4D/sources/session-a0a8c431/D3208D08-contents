@@ -2,19 +2,12 @@ Package: substackR
 Type: Package
 Title: Access Substack Data via API
 Version: 0.0.9
-Authors@R: 
-    person(
-      given = "Jason",
-      family = "R.",
-      email = "info@posocap.com",
-      role = c("aut")
-    ),
-    person(
-      given = "Jason",
-      family = "R.",
-      email = "info@posocap.com",
-      role = c("cre")
-    )
+Authors@R: person(
+ given   = "Jason",
+ family  = "R.",
+ email   = "info@posocap.com",
+ role    = c("aut", "cre")
+)
 Maintainer: Jason R. <info@posocap.com>
 Description: Fetch latest, top, search or single posts from a Substack publication.
 License: MIT + file LICENSE
@@ -27,10 +20,10 @@ RoxygenNote: 7.3.2
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 Imports:
-    cli,
-    httr2,
-    rlang
+ cli,
+ httr2,
+ rlang
 Suggests:
-    knitr,
-    rmarkdown,
-    testthat (>= 3.0.0)
+ knitr,
+ rmarkdown,
+ testthat (>= 3.0.0)

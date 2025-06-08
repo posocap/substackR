@@ -8,7 +8,6 @@
 * using session charset: UTF-8
 * using option ‘--as-cran’
 * checking for file ‘./DESCRIPTION’ ... ERROR
-Required fields missing or empty:
-  ‘Author’ ‘Maintainer’
+file ‘/home/user/Documents/poso_press/substackR/DESCRIPTION’ is not in valid DCF format
 * DONE
 Status: 1 ERROR
