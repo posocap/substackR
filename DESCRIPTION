@@ -1,13 +1,29 @@
 Package: substackR
-Title: Client Lib for Substack API.
-Version: 0.0.0.9000
+Type: Package
+Title: Access Substack Data via API
+Version: 0.0.9
 Author: Jason R.
-Authors@R: 
-    person("Jason", "R", , "info@posocap.com", role = c("aut", "cre"))
-Description: Client lib for Substack API.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
-Encoding: UTF-8
+Authors@R: person(
+ given   = "Jason",
+ family  = "R.",
+ email   = "info@posocap.com",
+ role    = c("aut", "cre"))
 Maintainer: Jason R. <info@posocap.com>
+Description: Fetch latest, top, search or single posts from a Substack publication.
+License: MIT + file LICENSE
+URL: https://github.com/posocap/substackR
+BugReports: https://github.com/posocap/substackR/issues
+Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Imports:
+ cli,
+ httr2,
+ rlang
+Suggests:
+ knitr,
+ rmarkdown,
+ testthat (>= 3.0.0)
